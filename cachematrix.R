@@ -47,13 +47,18 @@ cacheSolve <- function(x, ...) {
       message("getting cached data")
       return(i)
     }
+  
     #if no available result
+  
     # input the matrix
     data <- x$get()
+  
     #calculate the inverse with solve()
     i <- solve(data) 
+  
     # set the inverse
     x$setinverse(i)
+  
     # return the inverse
     i
   
